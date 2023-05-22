@@ -44,9 +44,9 @@ The code base supports versions v1, v2 and v3 and will raise an exception if oth
 # Observations:
 1) If the shape type is Ring and feature is a rectangle, coordinates are zero as the obstruction radius is also zero
 2) Based on my research regarding Solar roofs, pitch angle(elevation angle) => the recommended deg is 30 to 45 deg. Hence, for data below and above this threshold is handled in the angle_precession() method
-3) Additionally, for the Azimuth Angle- since the sun rises in the east and sets in the west, regardless of the latitude, the recommended angle is between 90 deg to 270 def. Hence, this is also handled in angle_precession() method.
+3) Additionally, for the Azimuth Angle- since the sun rises in the east and sets in the west, regardless of the latitude, the recommended angle is between 90 deg to 270 deg. Hence, this is also handled in angle_precession() method.
 4) Feature Engineering: With limited domain knowledge, for now, certain column values as discussed in the above point are ensured to have the required data and format. However, with further business requirement, additional features can be engineered from existing ones.
-5) When obstruction radius is zero(with no obstruction) feature name and shape type are 'Rectangle' and 'Ring' respectively. Similarly, when the obstruction 'Radius' is the highest(12), 'feature_name' and 'ShapeType' are 'DWV-Plastic' and 'Circle' respectively. With this info, we can induce a new binary feature indicating if there is any obstruction. 
+5) When obstruction radius is zero(with no obstruction) feature name and shape type are 'Rectangle' and 'Ring' respectively. Similarly, when the obstruction 'Radius' is the highest(12 inches), 'feature_name' and 'ShapeType' are 'DWV-Plastic' and 'Circle' respectively. With this info, we can induce a new binary feature indicating if there is any obstruction or not. 
 
 # Future Scope:
 A data model can be further developed to maintain the design and integrity of the data. As shown below the following relational schema can be used to create a relational data model.
